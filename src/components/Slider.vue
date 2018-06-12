@@ -1,11 +1,11 @@
 <template>
-<div class="body">
-  <el-carousel :interval="5000" arrow="always">
-    <el-carousel-item v-for="item in 4" :key="item">
-      <h3>{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
-</div>
+	<div class="Slider">
+	  <el-carousel :interval="5000" arrow="always">
+	    <el-carousel-item v-for="item in 4" :key="item">
+	      <h3>{{ item }}</h3>
+	    </el-carousel-item>
+	  </el-carousel>
+	</div>
 </template>
 
 <style>
@@ -13,7 +13,7 @@
   color: #475669;
   font-size: 18px;
   opacity: 0.75;
-  line-height: 300px;
+  line-height: 150px;
   margin: 0;
 }
 
@@ -24,4 +24,9 @@
 .el-carousel__item:nth-child(2n+1) {
   background-color: #d3dce6;
 }
+
+.el-carousel__container{
+	height: 150px;
+}
+   
 </style>

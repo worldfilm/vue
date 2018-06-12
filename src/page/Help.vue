@@ -1,22 +1,21 @@
 <template>
-	<div class="home">
-       <Slider/>
+	<div class="help">
        <Collapse/>	  	  
 	</div>
 </template>
 
 <script>
-import Slider from '@/components/Slider.vue';
-import Collapse from '@/components/Collapse.vue';
-export default {
-  components: {
-    Slider,Collapse
-  }
-}
+
+	import Collapse from '@/components/Collapse.vue';
+	export default {
+	  components: {
+	    Collapse
+	  }
+	}
 </script>
 
 <style lang="scss" scoped>
-.home{
+.help{
 	top: 1rem;
 	position: relative;
     left: 0;
