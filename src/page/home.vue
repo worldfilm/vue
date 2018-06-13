@@ -1,16 +1,19 @@
 <template>
 	<div class="home">
        <Slider/>
-       <Collapse/>	  	  
+       <MarqueeHelper/>	  
+       <Topbars/>	  
 	</div>
 </template>
 
 <script>
 import Slider from '@/components/Slider.vue';
 import Collapse from '@/components/Collapse.vue';
+import MarqueeHelper from '@/components/MarqueeHelper.vue';
+import Topbars from '@/components/Topbars.vue'
 export default {
   components: {
-    Slider,Collapse
+    Slider,Collapse,MarqueeHelper,Topbars
   }
 }
 </script>

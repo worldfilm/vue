@@ -1,6 +1,6 @@
 <template>
 	<div class="open">
-       <p>open  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+       <p>openopenopenopenopenopen</p>
 	</div>
 </template>
 
