@@ -1,13 +1,8 @@
 <template>
 	<div class="Slider">
 	  <el-carousel :interval="5000" arrow="always">
-<<<<<<< HEAD
 	    <el-carousel-item v-for="item in list">
 	      <img :src='item.src'/>
-=======
-	    <el-carousel-item v-for="item in 4" :key="item">
-	      <h3>{{ item }}</h3>
->>>>>>> 8b7a138a795903f6f6c41a243443479fd4a1afe4
 	    </el-carousel-item>
 	  </el-carousel>
 	</div>
