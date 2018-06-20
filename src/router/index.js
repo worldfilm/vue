@@ -1,29 +1,31 @@
+Vue.use(Router)
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/page/HelloWorld'
-import Navheader from '@/page/Navheader'
-import Navfooter from '@/page/Navfooter'
+import Navheader from '@/components/Navheader'
+import Navfooter from '@/components/Navfooter'
 import logoin from '@/page/logoin'
 import logoOut from '@/page/logoOut'
-import home from '@/page/home'
+import Home from '@/page/Home'
 import detail from '@/page/detail'
+import Help from '@/page/Help'
+import Open from '@/page/Open'
+import Recharge from '@/page/Recharge'
+import Register from '@/page/Register'
+import User from '@/page/User'
 import FormLogoin from '@/components/FormLogoin'
 
-Vue.use(Router)
+
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },{
-      path: '/HelloWorld',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },{
-      path: '/home',
-      name: 'home',
-      component: home
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/Home',
+      name: 'Home',
+      component: Home
     },{
       path: '/logoin',
       name: 'logoin',
@@ -48,6 +50,28 @@ export default new Router({
       path: '/FormLogoin',
       name: 'FormLogoin',
       component: FormLogoin
+    },{
+      path: '/Help',
+      name: 'Help',
+      component: Help
+    },{
+    	path: '/Open',
+      name: 'Open',
+      component: Open
+    },{
+    	path: '/User',
+      name: 'User',
+      component: User
+    },{
+    	path: '/Register',
+      name: 'Register',
+      component: Register
+    },{
+    	path: '/Recharge',
+      name: 'Recharge',
+      component: Recharge
     }
+
+
   ]
 })

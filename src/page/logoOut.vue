@@ -1,8 +1,10 @@
 <template>
-  <div  class="body">
+  <div  class="logout">
     <h2>logoOut</h2>
     <button>向父组件传值</button>
     <p>components里的logoOut页面</p>
+	    <Dropdown/>
+    
   </div>
 </template>
 
@@ -13,7 +15,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.body {
-    margin-top: 2rem;
-}
+
 </style>

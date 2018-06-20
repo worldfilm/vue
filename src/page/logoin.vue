@@ -1,5 +1,5 @@
 <template>
-<div class="body">
+<div class="logoin">
   <FormLogoin/>
 </div>
 </template>
@@ -15,7 +15,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.body {
-    margin-top: 2rem;
-}
+
 </style>
