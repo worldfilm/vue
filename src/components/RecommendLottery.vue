@@ -2,7 +2,7 @@
 	<div class='recommend-lottery'>
         <div class='top-bar'>
             <div class='' @Click='changeGame'>
-                  <span></span>
+                  <span>xx</span>
                   <div class='btm-choose-line'></div>
             </div>
         </div>
@@ -82,7 +82,7 @@
 				    numberRange: [0, 9],
 				    url: '../../static/shssl.png',
 				  },
-				
+
 				  {
 				    title: '江西多乐彩',
 				    lotteryId: '8',
@@ -134,7 +134,7 @@
 				    numberRange: [0, 9],
 				    url: '../../static/tjssc.png',
 				  },
-				
+
 				  {
 				    title: '好运夺金',
 				    lotteryId: '17',
@@ -235,7 +235,7 @@
 		},
 		methods:{
 		   changeGame(){
-		   	
+
 		   }
 		}
 	}
@@ -327,6 +327,6 @@
 		    }
 	    }
     }
-    
+
 }
 </style>

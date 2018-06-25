@@ -1,8 +1,8 @@
 <template>
     <div class="lobby-topbars">
-        <div  class='lobby-topbar-item-box' >
-           <img src=''/>
-           <span></span>
+        <div v-for='item in list'  class='lobby-topbar-item-box' >
+           <img :src='item.src'/>
+           <span >{{item.name}}</span>
         </div>
     </div>
 </template>
@@ -12,7 +12,26 @@
 
 export default {
   components: {
-    
+
+  },
+  data(){
+    return {
+      list:[
+         {
+            src:'../../static/jinjue_youhuihuodong_home.png',
+            name:'优惠'
+         },{
+            src:'../../static/jinjue_bet_history_home.png',
+            name:'注单'
+         },{
+            src:'../../static/jinjue_callcenter_home.png',
+            name:'客服'
+         },{
+            src:'../../static/jinjue_recharge_draw.png',
+            name:'提现'
+         }
+      ]
+    }
   }
 }
 </script>
@@ -51,6 +70,9 @@ export default {
                 -webkit-box-align: center;
                 -ms-flex-align: center;
                 align-items: center;
+                img{
+                height:2rem;
+                }
         }
 }
 </style>

@@ -2,10 +2,10 @@
   <div class="footer">
     <p>
     	<ul>
-    		<li @click="home"><img src="../images/jinjue_home_select.png"/><span>首页</span></li>
-    		<li @click="open"><img src="../images/jinjue_open_unselect.png"/><span>开奖</span></li>
-    		<li @click="recharge"><img src="../images/jin_juerecharge_unselect.png"/><span>充值</span></li>
-    		<li @click="user"><img src="../images/jinjue_my_unselect.png"/><span>我的</span></li>
+    		<li @click="home"><img :src="foot_home"/><span>首页</span></li>
+    		<li @click="open"><img :src="foot_open"/><span>游戏</span></li>
+    		<li @click="recharge"><img :src="foot_recharge"/><span>充值</span></li>
+    		<li @click="user"><img :src="foot_user"/><span>我的</span></li>
     	</ul>
     </p>
   </div>
@@ -14,6 +14,15 @@
   import Hub from '@/components/Hub'; //创建事件中心
 	export default{
 		name:'Navfooter',
+    data(){
+        return {
+             foot_home:'../../static/jinjue_home_select.png',
+             foot_open:'../../static/jinjue_open_unselect.png',
+             foot_recharge:'../../static/jin_juerecharge_unselect.png',
+             foot_user:'../../static/jinjue_my_unselect.png',
+             UserName:'guo'
+        }
+    },
 		components:{
 
 		},
@@ -21,20 +30,37 @@
 			home(){
 			  this.$router.push({path:'/Home'})
 			   Hub.$emit('change','首页'); //Hub触发事件
+         this.foot_home='../../static/jinjue_home_select.png'
+         this.foot_open='../../static/jinjue_open_unselect.png'
+         this.foot_recharge='../../static/jin_juerecharge_unselect.png'
+         this.foot_user='../../static/jinjue_my_unselect.png'
 			},
 			open(){
 				this.$router.push({path:'/Open'})
-				 Hub.$emit('change','开奖'); //Hub触发事件
+				 Hub.$emit('change','游戏'); //Hub触发事件
+         this.foot_home='../../static/jinjue_home_unselect.png'
+         this.foot_open='../../static/jinjue_open_select.png'
+         this.foot_recharge='../../static/jin_juerecharge_unselect.png'
+         this.foot_user='../../static/jinjue_my_unselect.png'
 			},
 			recharge(){
 				this.$router.push({path:'/Recharge'})
-				 Hub.$emit('change','充值'); //Hub触发事件
+				 Hub.$emit('change','存款'); //Hub触发事件
+         this.foot_recharge='../../static/jin_juerecharge_select.png'
+         this.foot_home='../../static/jinjue_home_unselect.png'
+         this.foot_open='../../static/jinjue_open_unselect.png'
+         this.foot_user='../../static/jinjue_my_unselect.png'
 			},
 			user(){
-				this.$router.push({path:'/User'})
-				 Hub.$emit('change','我的'); //Hub触发事件
+         console.log(this.UserName)
+				 this.user?(this.$router.push({path:'/logoin'})):(this.$router.push({path:'/User'}))
+				 Hub.$emit('change','个人中心'); //Hub触发事件
+         this.foot_user='../../static/jinjue_my_select.png'
+         this.foot_home='../../static/jinjue_home_unselect.png'
+         this.foot_open='../../static/jinjue_open_unselect.png'
+         this.foot_recharge='../../static/jin_juerecharge_unselect.png'
 			}
-		}	
+		}
 	}
 </script>
 <style lang="scss" scoped>
